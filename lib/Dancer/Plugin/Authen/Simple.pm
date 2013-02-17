@@ -3,7 +3,7 @@ use warnings;
 
 package Dancer::Plugin::Authen::Simple;
 {
-  $Dancer::Plugin::Authen::Simple::VERSION = '0.130480';
+  $Dancer::Plugin::Authen::Simple::VERSION = '0.130482';
 }
 use Dancer ':syntax';
 use Dancer::Plugin;
@@ -41,7 +41,7 @@ Dancer::Plugin::Authen::Simple - Easy Authentication for Dancer applications via
 
 =head1 VERSION
 
-version 0.130480
+version 0.130482
 
 =head1 SYNOPSIS
 
