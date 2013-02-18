@@ -3,12 +3,13 @@ use warnings;
 
 package Dancer::Plugin::Authen::Simple;
 {
-  $Dancer::Plugin::Authen::Simple::VERSION = '0.130482';
+  $Dancer::Plugin::Authen::Simple::VERSION = '0.130490';
 }
 use Dancer ':syntax';
 use Dancer::Plugin;
 use Module::Load;
 use Authen::Simple;
+use Memoize;
 
 #ABSTRACT: Easy Authentication for Dancer applications via Authen::Simple
 
@@ -17,7 +18,13 @@ use Authen::Simple;
 
 sub authen
 {
-    my $conf = plugin_setting();
+    _authen( plugin_setting() );
+}
+
+memoize('_authen');
+sub _authen
+{
+    my $conf = shift;
     my @adapters = ();
     $DB::single = 1;
     foreach my $adapter_name ( keys %$conf )
@@ -41,7 +48,7 @@ Dancer::Plugin::Authen::Simple - Easy Authentication for Dancer applications via
 
 =head1 VERSION
 
-version 0.130482
+version 0.130490
 
 =head1 SYNOPSIS
 

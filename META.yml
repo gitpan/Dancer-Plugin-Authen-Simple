@@ -20,10 +20,11 @@ requires:
   Authen::Simple: 0
   Dancer: 0
   Dancer::Plugin: 0
+  Memoize: 0
   Module::Load: 0
   strict: 0
   warnings: 0
 resources:
   homepage: https://github.com/spazm/p5-dancer-plugin-authen-simple
   repository: http://github.com/spazm/p5-dancer-plugin-authen-simple.git
-version: 0.130482
+version: 0.130490

@@ -28,11 +28,12 @@ my %WriteMakefileArgs = (
     "Authen::Simple" => 0,
     "Dancer" => 0,
     "Dancer::Plugin" => 0,
+    "Memoize" => 0,
     "Module::Load" => 0,
     "strict" => 0,
     "warnings" => 0
   },
-  "VERSION" => "0.130482",
+  "VERSION" => "0.130490",
   "test" => {
     "TESTS" => "t/*.t"
   }
