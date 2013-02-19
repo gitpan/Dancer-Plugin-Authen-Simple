@@ -3,7 +3,7 @@ use warnings;
 
 package Dancer::Plugin::Authen::Simple;
 {
-  $Dancer::Plugin::Authen::Simple::VERSION = '0.130490';
+  $Dancer::Plugin::Authen::Simple::VERSION = '0.130500';
 }
 use Dancer ':syntax';
 use Dancer::Plugin;
@@ -48,12 +48,12 @@ Dancer::Plugin::Authen::Simple - Easy Authentication for Dancer applications via
 
 =head1 VERSION
 
-version 0.130490
+version 0.130500
 
 =head1 SYNOPSIS
 
     use Dancer;
-    use Dancer::Plugins::Authen::Simple;
+    use Dancer::Plugin::Authen::Simple;
 
     # calling the authen keyword will get you a Authen::Simple object
     # e.g. authen->authenticate( $user, $pass)
@@ -74,7 +74,7 @@ version 0.130490
             debug "Password correct";
 
             # Logged in successfully
-            session user => $user;
+            session user => params->{user};
             redirect params->{path} || '/';
         }
         else

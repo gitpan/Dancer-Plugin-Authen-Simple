@@ -27,4 +27,4 @@ requires:
 resources:
   homepage: https://github.com/spazm/p5-dancer-plugin-authen-simple
   repository: http://github.com/spazm/p5-dancer-plugin-authen-simple.git
-version: 0.130490
+version: 0.130500
